@@ -1,0 +1,16 @@
+.my-text-headline-style {
+    height: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+}
+
+.my-text-style {
+    margin: 5%;
+    font-weight: 0;
+}

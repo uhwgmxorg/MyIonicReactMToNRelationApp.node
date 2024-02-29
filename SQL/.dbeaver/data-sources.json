@@ -1,0 +1,64 @@
+{
+	"folders": {},
+	"connections": {
+		"postgres-jdbc-18c908c68d3-5715d9623042a7a4": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "mydb",
+			"save-password": true,
+			"virtual-model-id": "postgres-jdbc-187d5f6ca34-6aec055207373b44",
+			"configuration": {
+				"host": "198.168.3.46",
+				"port": "5432",
+				"database": "mydb",
+				"url": "jdbc:postgresql://198.168.3.46:5432/mydb",
+				"configurationType": "MANUAL",
+				"home": "postgresql_client",
+				"type": "dev",
+				"auth-model": "native"
+			}
+		},
+		"postgres-jdbc-18d9a09492f-397f12b287a06432": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "postgres Strato Linux V-Server via SSH",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "5433",
+				"database": "postgres",
+				"url": "jdbc:postgresql://localhost:5433/postgres",
+				"configurationType": "MANUAL",
+				"home": "postgresql_client",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "true",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"read-keys-with-columns": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native"
+			}
+		}
+	},
+	"virtual-models": {"postgres-jdbc-187d5f6ca34-6aec055207373b44":{"mydb":{"dev":{"@properties":{"erd.diagram.state":{"serialized":"\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202312031117\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"postgres-jdbc-187d5f6ca34-6aec055207373b44\"\u003e\u003centity id\u003d\"1\" name\u003d\"user_group_mappings\" fq-name\u003d\"dev.user_group_mappings\" order\u003d\"0\" x\u003d\"199\" y\u003d\"58\"\u003e\u003cpath name\u003d\"dev\"/\u003e\u003cpath name\u003d\"mydb\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"user_group_role_mappings\" fq-name\u003d\"dev.user_group_role_mappings\" order\u003d\"1\" x\u003d\"613\" y\u003d\"56\"\u003e\u003cpath name\u003d\"dev\"/\u003e\u003cpath name\u003d\"mydb\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"3\" name\u003d\"user_groups\" fq-name\u003d\"dev.user_groups\" order\u003d\"2\" x\u003d\"437\" y\u003d\"57\"\u003e\u003cpath name\u003d\"dev\"/\u003e\u003cpath name\u003d\"mydb\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"4\" name\u003d\"user_roles\" fq-name\u003d\"dev.user_roles\" order\u003d\"3\" x\u003d\"853\" y\u003d\"58\"\u003e\u003cpath name\u003d\"dev\"/\u003e\u003cpath name\u003d\"mydb\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"5\" name\u003d\"users\" fq-name\u003d\"dev.users\" order\u003d\"4\" x\u003d\"17\" y\u003d\"38\"\u003e\u003cpath name\u003d\"dev\"/\u003e\u003cpath name\u003d\"mydb\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations\u003e\u003crelation name\u003d\"user_group_mappings_group_id_fkey\" fq-name\u003d\"dev.user_group_mappings.user_group_mappings_group_id_fkey\" type\u003d\"fk\" pk-ref\u003d\"3\" fk-ref\u003d\"1\"/\u003e\u003crelation name\u003d\"user_group_role_mappings_group_id_fkey\" fq-name\u003d\"dev.user_group_role_mappings.user_group_role_mappings_group_id_fkey\" type\u003d\"fk\" pk-ref\u003d\"3\" fk-ref\u003d\"2\"/\u003e\u003crelation name\u003d\"user_group_role_mappings_role_id_fkey\" fq-name\u003d\"dev.user_group_role_mappings.user_group_role_mappings_role_id_fkey\" type\u003d\"fk\" pk-ref\u003d\"4\" fk-ref\u003d\"2\"/\u003e\u003crelation name\u003d\"user_group_mappings_user_id_fkey\" fq-name\u003d\"dev.user_group_mappings.user_group_mappings_user_id_fkey\" type\u003d\"fk\" pk-ref\u003d\"5\" fk-ref\u003d\"1\"/\u003e\u003c/relations\u003e\u003c/diagram\u003e"}}}}}},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": false,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800
+		}
+	}
+}

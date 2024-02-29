@@ -1,0 +1,66 @@
+.content-center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+}
+
+.label-input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.input-field-number {
+  margin-top: 2px;
+  width: 50px;
+}
+
+.input-field-text {
+  margin-top: 2px;
+  width: 200px;
+}
+
+.my-button-style {
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 160px;
+  --background: #c9c9c9;
+  --color: #353535;
+}
+
+.custom-divider {
+  border: 0;
+  height: 1px;
+  background-color: black;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+.checkbox-flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  margin-top: -2px;
+}
+
+.checkbox-label {
+  padding-top: 0px;
+  padding-left: 3px;
+}

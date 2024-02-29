@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Course {
+  id                    Int                    @id @default(autoincrement())
+  subject               String                 @db.VarChar(50)
+  name                  String                 @db.VarChar(200)
+  studentCourseMappings StudentCourseMapping[] @relation("CourseToStudentCourseMapping")
+
+  @@map("course")
+}
+
+model Student {
+  id                    Int                    @id @default(autoincrement())
+  firstName             String                 @map("first_name") @db.VarChar(50)
+  surName               String                 @map("sur_name") @db.VarChar(50)
+  studentCourseMappings StudentCourseMapping[] @relation("StudentToStudentCourseMapping")
+
+  @@map("student")
+}
+
+model StudentCourseMapping {
+  id        Int     @id @default(autoincrement())
+  studentId Int     @map("student_id")
+  courseId  Int     @map("course_id")
+  course    Course  @relation("CourseToStudentCourseMapping", fields: [courseId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  student   Student @relation("StudentToStudentCourseMapping", fields: [studentId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@map("student_course_mappings")
+}

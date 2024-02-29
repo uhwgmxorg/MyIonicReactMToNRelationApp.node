@@ -1,0 +1,7 @@
+{
+  "name": "my-ionic-react-m-to-n-relation-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
